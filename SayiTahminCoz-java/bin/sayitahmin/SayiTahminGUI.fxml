@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane id="root" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sayitahmin.SayiTahminGUIController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+
+	<top>
+		<VBox alignment="CENTER"><children>
+   		<Label id="topLabel" text="Sayı Tahmin Oyunu Analiz ve Çözücüsü" />
+   		<HBox spacing="10"><children>
+	   		<GridPane id="topgrid" alignment="CENTER" hgap="10.0" prefHeight="58.0" prefWidth="262.0" vgap="2.0"><children>
+                <Label text="Tahmin" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label text="Sonuç" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+
+	      		<TextField fx:id="girTahmin" id="girTahmin" prefWidth="65.0" text="0123" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ComboBox fx:id="comboSonuç" prefHeight="30.0" prefWidth="77.0" visibleRowCount="15" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+	      		<Button fx:id="girButon" onAction="#tahminSonuçGir" text="Gir" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+	
+		    </children></GridPane>
+      		<Button id="basButon" fx:id="başButon" onAction="#yeniBaştan" prefHeight="56.0" prefWidth="90.0" text="Yeni&#10;Baştan" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="0" GridPane.rowSpan="2" />
+			<Label id="mesajLabel" fx:id="mesajLabel" prefHeight="56.0" prefWidth="867.0" text="Uyarı ve bilgilendirmeler burada çıkacaktır." GridPane.columnIndex="6" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS" />
+    	</children></HBox>
+   		</children></VBox>
+	</top>
+
+	<center>
+		<HBox spacing="5.0">
+			<children>
+			
+			<TableView id="oyunTab" fx:id="oyunTab">
+					<columns>
+						<TableColumn fx:id="oyunNoCol" prefWidth="40.0" text="No" />
+						<TableColumn fx:id="oyunAdetCol" prefWidth="90.0" text="Olasılık Sayısı" />
+						<TableColumn fx:id="oyunTahCol" styleClass="boldRed" prefWidth="70.0" text="Tahmin" />
+						<TableColumn fx:id="oyunSonCol" styleClass="boldRed" prefWidth="60.0" text="Sonuç" />
+					</columns>
+			</TableView>
+
+            <TableView fx:id="olasılıklarTab" prefWidth="100">
+            <columns>
+                <TableColumn fx:id="olasılıklarCol" styleClass="boldBlueCtr" text="Olasılıklar" />
+            </columns>
+            </TableView>
+
+				<TableView id="analizTab" fx:id="analizTab">
+					<columns>
+						<TableColumn fx:id="analizTahCol" prefWidth="70.0" styleClass="boldRed, ctr14" text="TAHMİN" />
+						<TableColumn fx:id="analizEntCol" prefWidth="59.0" styleClass="boldBlueCtr" text="Entropi" />
+						<TableColumn fx:id="analizMaxCol" prefWidth="54.0" styleClass="boldBlueCtr" text="Max" />
+						<TableColumn fx:id="analizOrtCol" prefWidth="60.0" styleClass="boldBlueCtr" text="Ortalama" />
+						<TableColumn fx:id="analizUzCol" prefWidth="55.0" styleClass="boldBlueCtr" text="Uzunluk" />
+						<TableColumn fx:id="analizEsCol" prefWidth="55.0" styleClass="boldBlueCtr" text="Eşdeğer" />
+						<TableColumn fx:id="analizHisCol" prefWidth="513.0" text="----Histogram----" />
+					</columns>
+				</TableView>
+
+            <TableView prefWidth="135.0">
+              <columns>
+                <TableColumn prefWidth="115.0" text="Eşdeğer Tahminler" />
+              </columns>
+            </TableView>
+
+			</children>
+		</HBox>
+	</center>
+
+	<bottom>
+	<VBox>
+	<children>
+		<Label id="bottomlabel" text="Kadir A. Peker (r) 2017" />
+	</children>
+	</VBox>
+	</bottom>
+
+</BorderPane>

@@ -1,0 +1,73 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#root {
+     -fx-background-image: url("background.jpg");
+}
+
+#topLabel {
+	-fx-alignment: center;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #993333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+	-fx-padding: 10;	
+}
+
+#topgrid {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-background-color: #edd;
+    -fx-background-radius: 1.0em 1em 0 0;
+    -fx-border-color: #cbb;
+    -fx-border-radius: 1.0em 1em 0 0;
+    -fx-padding: 0.5em;
+}
+
+#girTahmin {
+    -fx-font-size: 16px;
+}
+
+#basButon {
+    -fx-background-color: linear-gradient(#ff5400, #bb3322);
+    -fx-background-radius: 30;
+    -fx-border-color: #a21;
+    -fx-border-width: 4px;
+    -fx-border-radius: 30;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#mesajLabel {
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+    -fx-text-fill: #aa3300;
+    -fx-background-color: #dde;
+}
+
+#oyunTab .cell {
+    -fx-font-size: 18px;
+    -fx-alignment: center;
+}
+
+.boldRed {
+    -fx-font-weight: bold;
+    -fx-text-fill: #b22;
+}
+
+.ctr14 {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+	-fx-alignment:center;
+}
+
+.boldBlueCtr {
+    -fx-text-fill: blue;
+	-fx-alignment:center;
+}
+
+#bottomlabel {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #336;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+	-fx-padding: 5;	
+}
