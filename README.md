@@ -8,9 +8,11 @@ Bu repo'da Sayı Tahmin Oyunu'nun analizi ve çözümü üzerine geliştirilmiş
 
 ## Sayı Tahmin Oyunu
 Bilgisayar (veya birinci oyuncu) 4 basamaklı bir sayı tutar. Sayı 0 ile başlayabilir ve rakamlar tekrar etmez. Oyuncu 4 basamaklı bir sayı söyleyerek tahminde bulunur. Bilgisayar, kaç rakamı doğru bildiğinizi şu şekilde söyler: kaç tane *rakam doğru ama yeri yanlış* (buna B diyelim), kaç tane *rakam ve yeri doğru* (A diyelim). Mesela:
-> Sayı: **1234**
-> Tahmin: **3524**
-> Sonuç: 1A 2B *(4 -> 1A. 3 ve 2 -> 2B)*
+>   Sayı: **1234**
+>   Tahmin: **3524**
+>   Sonuç: 1A 2B *(4 -> 1A. 3 ve 2 -> 2B)*
+
+Oyunun farklı varyasyonları düşünülebilir. Örneğin basamak sayısı (4 yerine 3, 5,...), basamak tekrar edip edemeyeceği, 0'la başlayıp başlayamayacağı, kullanılabilen rakamlar/karakterler (0-9, 0-6, 0-F, A-Z,...) değiştirilebilir. Burada verilen, oyunun en yaygın halidir.
 
 ## Çözüm Yardım Programı (Java)
 Bu program, sayı tahmin oyunu oynarken size yardımcı olacaktır. Her tahmin ve sonuç ardından, olabilecek sayı listesini sunar. İlk başta 5040 alternatif vardır. Tahminde bulunup 1A2B vb. cevaplar aldıkça alternatifler azalır. 
